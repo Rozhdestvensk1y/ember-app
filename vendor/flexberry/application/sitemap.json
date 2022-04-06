@@ -1,0 +1,29 @@
+﻿{
+  "applicationCaption": "Тестовое задание",
+  "applicationTitle": "Тестовое задание",
+  "items": [
+    {
+      "link": null,
+      "menuName": "product-36997",
+      "caption": "Тестовое задание",
+      "title": "Тестовое задание",
+      "children": [
+        {
+          "link": "timepath-test-task-response-l",
+          "menuName": null,
+          "caption": "Response",
+          "title": "",
+          "children": null
+        },
+        {
+          "link":"test-table-l",
+          "menuName":null,
+          "caption": "Table",
+          "title":"",
+          "children":null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

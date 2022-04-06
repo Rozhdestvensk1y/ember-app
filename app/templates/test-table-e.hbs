@@ -1,0 +1,42 @@
+<table id="myTable" border="1">
+    <tbody>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Author</td>
+            <td>Pages</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    async function getResponse(){
+    var response = await fetch('https://teststand.t-mobis.ru/Books')
+    var content = await response.json()
+    var obj = JSON.parse(content)
+    var list = document.getElementById('myTable')
+
+        for(var key in obj)
+        {   
+            if(obj[key].ID != undefined){
+            var tr = document.createElement('tr')
+            var tdID = document.createElement('td')
+            var tdName = document.createElement('td')
+            var tdAuthor = document.createElement('td')
+            var tdPages = document.createElement('td')
+            tdID.appendChild(document.createTextNode(`${obj[key].ID}`))
+            tdName.appendChild(document.createTextNode(`${obj[key].Name}`))
+            tdAuthor.appendChild(document.createTextNode(`${obj[key].Author}`))
+            tdPages.appendChild(document.createTextNode(`${obj[key].Pages}`))
+            tr.appendChild(tdID)
+            tr.appendChild(tdName)
+            tr.appendChild(tdAuthor)
+            tr.appendChild(tdPages)
+            list.appendChild(tr)
+            }
+        }
+        
+    }
+
+    getResponse()
+</script>
